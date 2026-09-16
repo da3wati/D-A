@@ -1,0 +1,1713 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width,
+initial-scale=1.0,
+maximum-scale=1.0,
+user-scalable=no">
+
+<title>دُنْيَا & أَمِين | Invitation</title>
+
+<meta property="og:title" content="دُنْيَا & أَمِين">
+<meta property="og:description" content="دعوة زفاف دُنْيَا وأَمِين">
+<meta property="og:image" content="cover.png">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+
+<style>
+
+/* =========================================
+   RESET
+========================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    font-family:"Cairo",sans-serif;
+    color:#201718;
+    overflow-x:hidden;
+    background:#f5e9e7;
+}
+
+
+/* =========================================
+   FIXED BACKGROUND
+========================================= */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background-image:
+        linear-gradient(
+            rgba(255,246,244,.18),
+            rgba(255,246,244,.18)
+        ),
+        url("background.png");
+
+    background-size:cover;
+
+    background-position:center center;
+
+    background-repeat:no-repeat;
+
+    z-index:-3;
+}
+
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(255,245,243,.12),
+            rgba(255,245,243,.03) 45%,
+            rgba(255,245,243,.16)
+        );
+
+    z-index:-2;
+
+    pointer-events:none;
+}
+
+
+/* =========================================
+   COVER
+========================================= */
+
+#cover{
+
+    position:fixed;
+
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    z-index:9999;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:#f5ebe8;
+
+    cursor:pointer;
+
+    transition:
+        opacity 1s ease,
+        visibility 1s ease;
+}
+
+
+#cover.hidden{
+
+    opacity:0;
+
+    visibility:hidden;
+
+    pointer-events:none;
+}
+
+
+.cover-image{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    object-position:center;
+
+    display:block;
+}
+
+
+/* =========================================
+   INVITATION
+========================================= */
+
+#invitation{
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:opacity 1.2s ease;
+}
+
+
+#invitation.show{
+
+    opacity:1;
+
+    visibility:visible;
+}
+
+
+/* =========================================
+   SECTIONS
+========================================= */
+
+.section{
+
+    width:100%;
+
+    min-height:auto;
+
+    padding:
+        48px
+        18px
+        42px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    position:relative;
+}
+
+
+/* زخرفة أعلى الأقسام */
+
+.section::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:14px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:70px;
+
+    height:1px;
+
+    background:rgba(142,103,66,.7);
+}
+
+
+.section:first-child::before{
+
+    display:none;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.content{
+
+    width:100%;
+
+    max-width:620px;
+
+    position:relative;
+
+    padding:0 5px;
+}
+
+
+/* =========================================
+   GOLD DECORATION
+========================================= */
+
+.ornament{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    margin:14px auto;
+}
+
+
+.ornament::before,
+.ornament::after{
+
+    content:"";
+
+    display:block;
+
+    width:55px;
+
+    height:1px;
+
+    background:rgba(143,101,59,.75);
+}
+
+
+.ornament span{
+
+    color:#a87943;
+
+    font-size:16px;
+
+    line-height:1;
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.bismillah{
+
+    font-family:"Amiri",serif;
+
+    font-size:
+        clamp(1.45rem,5vw,2rem);
+
+    font-weight:700;
+
+    line-height:1.8;
+
+    color:#171112;
+
+    margin-bottom:12px;
+
+    text-shadow:
+        0 1px 5px rgba(255,255,255,.5);
+}
+
+
+.verse{
+
+    font-family:"Amiri",serif;
+
+    font-size:
+        clamp(1.25rem,4.7vw,1.85rem);
+
+    font-weight:400;
+
+    line-height:2;
+
+    color:#161112;
+
+    max-width:600px;
+
+    margin:auto;
+
+    text-shadow:
+        0 1px 5px rgba(255,255,255,.55);
+}
+
+
+.verse-note{
+
+    font-family:"Amiri",serif;
+
+    font-size:1.05rem;
+
+    margin-top:7px;
+
+    color:#302325;
+
+    font-weight:700;
+}
+
+
+/* =========================================
+   NAMES
+========================================= */
+
+.names{
+
+    font-family:"Amiri",serif;
+
+    direction:rtl;
+
+    font-size:
+        clamp(3.3rem,13vw,6rem);
+
+    font-weight:700;
+
+    line-height:1.25;
+
+    margin:
+        20px 0
+        4px;
+
+    color:#090707;
+
+    text-shadow:
+        0 2px 10px rgba(255,255,255,.45);
+
+    white-space:nowrap;
+}
+
+
+.names span{
+
+    display:inline-block;
+
+    margin:
+        0 7px;
+
+    color:#a8783f;
+
+    font-size:.62em;
+
+    vertical-align:middle;
+
+    transform:translateY(-2px);
+}
+
+
+.subtitle{
+
+    font-family:"Amiri",serif;
+
+    font-size:
+        clamp(1.15rem,4.2vw,1.5rem);
+
+    color:#261b1d;
+
+    margin-top:4px;
+
+    font-weight:700;
+}
+
+
+/* =========================================
+   DATE
+========================================= */
+
+.date-label{
+
+    font-family:"Amiri",serif;
+
+    font-size:1.45rem;
+
+    color:#4b3430;
+
+    margin-bottom:2px;
+}
+
+
+.date{
+
+    font-family:"Amiri",serif;
+
+    font-size:
+        clamp(2.4rem,9vw,4rem);
+
+    font-weight:700;
+
+    line-height:1.3;
+
+    color:#171011;
+
+    text-shadow:
+        0 2px 7px rgba(255,255,255,.5);
+}
+
+
+.time{
+
+    font-size:1.15rem;
+
+    margin-top:2px;
+
+    font-weight:700;
+
+    color:#382527;
+
+    direction:ltr;
+}
+
+
+/* =========================================
+   COUNTDOWN
+========================================= */
+
+.countdown{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:
+        clamp(7px,2vw,15px);
+
+    direction:ltr;
+
+    margin-top:24px;
+}
+
+
+.time-box{
+
+    width:
+        clamp(67px,18vw,92px);
+
+    height:
+        clamp(67px,18vw,92px);
+
+    border-radius:50%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:
+        rgba(255,255,255,.20);
+
+    border:
+        1.5px solid
+        rgba(150,106,61,.85);
+
+    box-shadow:
+        0 3px 14px
+        rgba(85,50,35,.12),
+        inset 0 0 0 3px
+        rgba(255,255,255,.22);
+}
+
+
+.time-number{
+
+    font-family:"Cairo",sans-serif;
+
+    font-size:
+        clamp(1.15rem,4vw,1.55rem);
+
+    font-weight:700;
+
+    line-height:1;
+
+    color:#171112;
+}
+
+
+.time-label{
+
+    font-family:"Cairo",sans-serif;
+
+    font-size:
+        clamp(.55rem,2.1vw,.7rem);
+
+    margin-top:5px;
+
+    color:#4a3535;
+}
+
+
+/* =========================================
+   VENUE
+========================================= */
+
+.section-title{
+
+    font-family:"Amiri",serif;
+
+    font-size:
+        clamp(2rem,7vw,3rem);
+
+    font-weight:700;
+
+    color:#191112;
+
+    line-height:1.4;
+
+    margin-bottom:13px;
+}
+
+
+.venue-image{
+
+    display:block;
+
+    width:100%;
+
+    max-width:570px;
+
+    max-height:370px;
+
+    object-fit:cover;
+
+    border-radius:18px;
+
+    margin:
+        0 auto 14px;
+
+    border:
+        2px solid
+        rgba(151,108,66,.72);
+
+    box-shadow:
+        0 12px 35px
+        rgba(60,35,30,.18);
+}
+
+
+.venue-name{
+
+    font-family:"Amiri",serif;
+
+    font-size:
+        clamp(2rem,7vw,3rem);
+
+    font-weight:700;
+
+    color:#1c1213;
+
+    line-height:1.25;
+}
+
+
+.venue-address{
+
+    font-family:"Amiri",serif;
+
+    font-size:1.25rem;
+
+    color:#4a3435;
+
+    margin-top:0;
+}
+
+
+/* =========================================
+   MAP BUTTON
+========================================= */
+
+.map-button{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    margin-top:14px;
+
+    padding:
+        11px 27px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    color:#fff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #8c6239,
+            #b58a55,
+            #815831
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.65);
+
+    box-shadow:
+        0 7px 18px
+        rgba(70,40,25,.22);
+
+    font-family:"Cairo",sans-serif;
+
+    font-size:.9rem;
+
+    font-weight:600;
+
+    transition:.3s;
+}
+
+
+.map-button:hover{
+
+    transform:translateY(-2px);
+}
+
+
+/* =========================================
+   PROGRAM
+========================================= */
+
+.program{
+
+    width:100%;
+
+    max-width:540px;
+
+    margin:auto;
+}
+
+
+.program-item{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:18px;
+
+    padding:
+        12px 8px;
+
+    border-bottom:
+        1px solid
+        rgba(112,79,51,.35);
+}
+
+
+.program-item:last-child{
+
+    border-bottom:none;
+}
+
+
+.program-time{
+
+    font-size:
+        clamp(1.4rem,5vw,1.8rem);
+
+    font-weight:700;
+
+    direction:ltr;
+
+    color:#161011;
+}
+
+
+.program-text{
+
+    font-family:"Amiri",serif;
+
+    font-size:
+        clamp(1.25rem,4.5vw,1.6rem);
+
+    color:#24191b;
+
+    font-weight:700;
+}
+
+
+/* =========================================
+   RULES
+========================================= */
+
+.rules{
+
+    width:100%;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:18px;
+
+    max-width:590px;
+
+    margin:auto;
+}
+
+
+.rule{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    padding:
+        8px 4px;
+}
+
+
+.rule-icon{
+
+    width:
+        clamp(58px,17vw,78px);
+
+    height:
+        clamp(58px,17vw,78px);
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border:
+        2px solid
+        rgba(134,79,51,.72);
+
+    background:
+        rgba(255,255,255,.18);
+
+    font-size:
+        clamp(1.6rem,6vw,2.2rem);
+
+    margin-bottom:9px;
+
+    box-shadow:
+        0 5px 14px
+        rgba(60,35,30,.12);
+}
+
+
+.rule-text{
+
+    font-family:"Amiri",serif;
+
+    font-size:
+        clamp(.95rem,3.5vw,1.2rem);
+
+    line-height:1.65;
+
+    color:#1e1517;
+
+    font-weight:700;
+
+    max-width:240px;
+}
+
+
+/* =========================================
+   FINAL
+========================================= */
+
+.final-message{
+
+    font-family:"Amiri",serif;
+
+    font-size:
+        clamp(3rem,12vw,5rem);
+
+    font-weight:700;
+
+    line-height:1.3;
+
+    color:#151011;
+
+    text-shadow:
+        0 2px 9px rgba(255,255,255,.55);
+}
+
+
+.final-subtitle{
+
+    font-family:"Amiri",serif;
+
+    font-size:
+        clamp(1.15rem,4vw,1.45rem);
+
+    margin-top:4px;
+
+    color:#392829;
+
+    font-weight:700;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer{
+
+    padding:
+        20px 20px 35px;
+
+    text-align:center;
+}
+
+
+.signature{
+
+    font-family:"Great Vibes",cursive;
+
+    font-size:1.7rem;
+
+    color:#795c4b;
+}
+
+
+/* =========================================
+   MUSIC
+========================================= */
+
+.music-button{
+
+    position:fixed;
+
+    bottom:17px;
+
+    left:17px;
+
+    width:46px;
+
+    height:46px;
+
+    border-radius:50%;
+
+    border:
+        1px solid
+        rgba(255,255,255,.8);
+
+    background:
+        rgba(112,76,52,.78);
+
+    color:#fff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    z-index:1000;
+
+    box-shadow:
+        0 6px 18px
+        rgba(0,0,0,.2);
+
+    cursor:pointer;
+
+    font-size:1.1rem;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media(max-width:480px){
+
+    .section{
+
+        padding:
+            38px 14px
+            32px;
+    }
+
+
+    .section::before{
+
+        top:10px;
+
+        width:55px;
+    }
+
+
+    .bismillah{
+
+        margin-bottom:7px;
+    }
+
+
+    .verse{
+
+        line-height:1.85;
+    }
+
+
+    .names{
+
+        margin-top:15px;
+
+        font-size:
+            clamp(3rem,13vw,4rem);
+    }
+
+
+    .countdown{
+
+        margin-top:18px;
+
+        gap:6px;
+    }
+
+
+    .venue-image{
+
+        border-radius:14px;
+
+        max-height:310px;
+    }
+
+
+    .rules{
+
+        gap:5px;
+    }
+
+
+    .rule-text{
+
+        font-size:.9rem;
+
+        line-height:1.55;
+    }
+
+
+    .final-message{
+
+        font-size:
+            clamp(2.8rem,12vw,4rem);
+    }
+
+}
+
+
+/* =========================================
+   VERY SMALL PHONES
+========================================= */
+
+@media(max-width:360px){
+
+    .section{
+
+        padding-left:10px;
+
+        padding-right:10px;
+    }
+
+
+    .names{
+
+        font-size:2.8rem;
+    }
+
+
+    .countdown{
+
+        gap:4px;
+    }
+
+
+    .time-box{
+
+        width:64px;
+
+        height:64px;
+    }
+
+
+    .rule-text{
+
+        font-size:.82rem;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     COVER
+========================================= -->
+
+<div id="cover"
+     onclick="openInvitation()">
+
+    <img
+        src="cover.png"
+        class="cover-image"
+        alt="اضغط لفتح الدعوة">
+
+</div>
+
+
+<!-- =========================================
+     MUSIC
+========================================= -->
+
+<audio id="music"
+       loop
+       preload="auto">
+
+    <source
+        src="music.mp3"
+        type="audio/mpeg">
+
+</audio>
+
+
+<button
+    class="music-button"
+    id="musicButton"
+    onclick="toggleMusic(event)">
+
+    ♪
+
+</button>
+
+
+<!-- =========================================
+     INVITATION
+========================================= -->
+
+<main id="invitation">
+
+
+<!-- =========================================
+     INTRO
+========================================= -->
+
+<section class="section">
+
+<div class="content">
+
+    <div class="bismillah">
+
+        بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيمِ
+
+    </div>
+
+
+    <div class="verse">
+
+        ﴿وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ
+        أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا
+        إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً
+        وَرَحْمَةً إِنَّ فِي ذَٰلِكَ لَآيَاتٍ
+        لِّقَوْمٍ يَتَفَكَّرُونَ﴾
+
+    </div>
+
+
+    <div class="verse-note">
+
+        صدق الله العظيم
+
+    </div>
+
+
+    <div class="ornament">
+        <span>✦</span>
+    </div>
+
+
+    <!-- الأسماء -->
+
+    <div class="names">
+
+        دُنْيَا
+
+        <span>♡</span>
+
+        أَمِين
+
+    </div>
+
+
+    <div class="subtitle">
+
+        يسعدنا أن نشارككم فرحتنا
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================
+     DATE
+========================================= -->
+
+<section class="section">
+
+<div class="content">
+
+    <div class="date-label">
+
+        موعد فرحتنا
+
+    </div>
+
+
+    <div class="date">
+
+        26 نوفمبر 2026
+
+    </div>
+
+
+    <div class="time">
+
+        14:00
+
+    </div>
+
+
+    <div class="ornament">
+        <span>♡</span>
+    </div>
+
+
+    <!-- COUNTDOWN -->
+
+    <div class="countdown">
+
+
+        <div class="time-box">
+
+            <span
+                class="time-number"
+                id="days">
+                0
+            </span>
+
+            <span class="time-label">
+                أيام
+            </span>
+
+        </div>
+
+
+        <div class="time-box">
+
+            <span
+                class="time-number"
+                id="hours">
+                0
+            </span>
+
+            <span class="time-label">
+                ساعات
+            </span>
+
+        </div>
+
+
+        <div class="time-box">
+
+            <span
+                class="time-number"
+                id="minutes">
+                0
+            </span>
+
+            <span class="time-label">
+                دقائق
+            </span>
+
+        </div>
+
+
+        <div class="time-box">
+
+            <span
+                class="time-number"
+                id="seconds">
+                0
+            </span>
+
+            <span class="time-label">
+                ثواني
+            </span>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================
+     VENUE
+========================================= -->
+
+<section class="section">
+
+<div class="content">
+
+    <h2 class="section-title">
+
+        مكان الحفل
+
+    </h2>
+
+
+    <img
+        src="venue.png"
+        class="venue-image"
+        alt="Villa La Rita">
+
+
+    <div class="venue-name">
+
+        Villa La Rita
+
+    </div>
+
+
+    <div class="venue-address">
+
+        Al Achour
+
+    </div>
+
+
+    <a
+        class="map-button"
+        href="https://maps.app.goo.gl/DCdGCXhnqPnytzGf9"
+        target="_blank"
+        rel="noopener">
+
+        📍 فتح الموقع على الخريطة
+
+    </a>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================
+     PROGRAM
+========================================= -->
+
+<section class="section">
+
+<div class="content">
+
+    <h2 class="section-title">
+
+        برنامج اليوم
+
+    </h2>
+
+
+    <div class="program">
+
+
+        <div class="program-item">
+
+            <div class="program-text">
+
+                استقبال الضيوف وبداية الحفل
+
+            </div>
+
+            <div class="program-time">
+
+                14:00
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================
+     RULES
+========================================= -->
+
+<section class="section">
+
+<div class="content">
+
+    <h2 class="section-title">
+
+        تنبيهات مهمة
+
+    </h2>
+
+
+    <div class="rules">
+
+
+        <!-- NO PHOTOS -->
+
+        <div class="rule">
+
+            <div class="rule-icon">
+
+                📷
+
+            </div>
+
+
+            <div class="rule-text">
+
+                نرجو منكم عدم التصوير
+                أثناء الحفل احترامًا
+                لخصوصية العروس.
+
+            </div>
+
+        </div>
+
+
+        <!-- NO CHILDREN -->
+
+        <div class="rule">
+
+            <div class="rule-icon">
+
+                🚫
+
+            </div>
+
+
+            <div class="rule-text">
+
+                نعتذر عن استقبال الأطفال
+                داخل قاعة الحفل.
+                نشكركم على تفهمكم.
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================
+     FINAL
+========================================= -->
+
+<section class="section">
+
+<div class="content">
+
+    <div class="ornament">
+        <span>✦</span>
+    </div>
+
+
+    <div class="final-message">
+
+        ننتظر قدومكم
+
+    </div>
+
+
+    <div class="final-subtitle">
+
+        حضوركم يزيد فرحتنا جمالًا
+
+    </div>
+
+
+    <div class="ornament">
+        <span>♡</span>
+    </div>
+
+</div>
+
+</section>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="signature">
+
+        Made with love
+
+    </div>
+
+</footer>
+
+
+</main>
+
+
+
+<script>
+
+/* =========================================
+   OPEN INVITATION
+========================================= */
+
+function openInvitation(){
+
+    const cover =
+        document.getElementById("cover");
+
+    const invitation =
+        document.getElementById("invitation");
+
+    const music =
+        document.getElementById("music");
+
+
+    cover.classList.add("hidden");
+
+
+    setTimeout(function(){
+
+        invitation.classList.add("show");
+
+    },400);
+
+
+    music.play()
+    .then(function(){
+
+        document
+        .getElementById("musicButton")
+        .innerHTML="❚❚";
+
+    })
+    .catch(function(){
+
+        document
+        .getElementById("musicButton")
+        .innerHTML="♪";
+
+    });
+
+}
+
+
+
+/* =========================================
+   MUSIC
+========================================= */
+
+function toggleMusic(event){
+
+    event.stopPropagation();
+
+
+    const music =
+        document.getElementById("music");
+
+
+    const button =
+        document.getElementById("musicButton");
+
+
+    if(music.paused){
+
+        music.play()
+        .then(function(){
+
+            button.innerHTML="❚❚";
+
+        })
+        .catch(function(){});
+
+    }
+
+    else{
+
+        music.pause();
+
+        button.innerHTML="♪";
+
+    }
+
+}
+
+
+
+/* =========================================
+   COUNTDOWN
+========================================= */
+
+/*
+   26 November 2026
+   14:00
+*/
+
+const weddingDate =
+    new Date(
+        2026,
+        10,
+        26,
+        14,
+        0,
+        0
+    ).getTime();
+
+
+
+function updateCountdown(){
+
+    const now =
+        new Date().getTime();
+
+
+    const distance =
+        weddingDate - now;
+
+
+    if(distance <= 0){
+
+        document
+        .getElementById("days")
+        .innerText="0";
+
+
+        document
+        .getElementById("hours")
+        .innerText="0";
+
+
+        document
+        .getElementById("minutes")
+        .innerText="0";
+
+
+        document
+        .getElementById("seconds")
+        .innerText="0";
+
+
+        return;
+    }
+
+
+    const days =
+        Math.floor(
+            distance /
+            (1000*60*60*24)
+        );
+
+
+    const hours =
+        Math.floor(
+            (distance %
+            (1000*60*60*24)) /
+            (1000*60*60)
+        );
+
+
+    const minutes =
+        Math.floor(
+            (distance %
+            (1000*60*60)) /
+            (1000*60)
+        );
+
+
+    const seconds =
+        Math.floor(
+            (distance %
+            (1000*60)) /
+            1000
+        );
+
+
+    document
+    .getElementById("days")
+    .innerText=days;
+
+
+    document
+    .getElementById("hours")
+    .innerText=hours;
+
+
+    document
+    .getElementById("minutes")
+    .innerText=minutes;
+
+
+    document
+    .getElementById("seconds")
+    .innerText=seconds;
+
+}
+
+
+updateCountdown();
+
+
+setInterval(
+    updateCountdown,
+    1000
+);
+
+</script>
+
+
+</body>
+</html>
